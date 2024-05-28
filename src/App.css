@@ -1,0 +1,56 @@
+.login-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.nav-section{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-area {
+    display: flex;
+    justify-content: center; 
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0; /* 추가: 기본 패딩을 제거하여 중앙 정렬을 개선 */
+    margin: 0; /* 추가: 기본 마진을 제거하여 중앙 정렬을 개선 */
+}
+
+.menu-list li {
+    padding: 0 8px;
+    font-size: 16px; /* 수정: font 속성을 font-size로 변경 */
+}
+
+
+.menu-search-area {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.menu-search {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.menu-search input {
+    border: none;
+}
+
+.menu-search input:focus {
+    outline: none;
+}

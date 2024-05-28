@@ -1,6 +1,7 @@
 
 /*
 1. 전체 상품 페이지, 로그인, 상품 상세 페이지(완료)
+1-1 메뉴 만들기
 2. 전체 상품 페이지 : 전체 상품 볼 수 있음
 3. 로그인 페이지 : 로그인 버튼 클릭 시
 4. 상품을 눌렀으나 로그인이 안 된 경우 로그인 페이지가 나오고
@@ -16,10 +17,12 @@ import './App.css';
 import ProductAllPage from './pages/ProductAllPage';
 import LoginPage from './pages/LoginPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div >
+     <Navbar/>
      <Routes>
       <Route path="/" element={<ProductAllPage/>}/>
       <Route path="/login" element={<LoginPage/>}/>
