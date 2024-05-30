@@ -1,56 +1,69 @@
-.login-btn{
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px;
-}
-
-.nav-section{
-    display: flex;
-    justify-content: center;
-}
-
-.menu-area {
-    display: flex;
-    justify-content: center; 
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; 
-    width: 100%; 
-}
-
-.menu-list {
-    display: flex;
+ol, ul {
     list-style-type: none;
-    justify-content: center;
+}
+
+/* CSS 코드 */
+.navbar-area {
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-login-area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo-area {
     flex-grow: 1;
-    padding: 0; /* 추가: 기본 패딩을 제거하여 중앙 정렬을 개선 */
-    margin: 0; /* 추가: 기본 마진을 제거하여 중앙 정렬을 개선 */
-}
-
-.menu-list li {
-    padding: 0 8px;
-    font-size: 16px; /* 수정: font 속성을 font-size로 변경 */
-}
-
-
-.menu-search-area {
     display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.menu-search {
-    border-bottom: 1px solid black;
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.menu-search input {
+/* 이미지 오른쪽으로 약간 이동 */
+.logo-area img {
+    margin-left: 20px; /* 필요에 따라 조정하세요 */
+}
+
+.login-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px; /* 필요에 따라 조정하세요 */
+}
+
+.menu-serch-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.menu-serch-area ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* ul 태그 가운데 정렬 */
+    flex-grow: 1; /* ul 태그가 가로로 확장되도록 설정 */
+}
+
+.menu-serch-area li {
+    margin-right: 20px; /* 메뉴 아이템 간 간격 조정 */
+}
+
+.serch-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px; /* 필요에 따라 조정하세요 */
+    border-bottom: 1px solid #ccc; /* 하단 테두리 설정 */
+}
+
+.serch-group input {
     border: none;
-}
-
-.menu-search input:focus {
-    outline: none;
 }
