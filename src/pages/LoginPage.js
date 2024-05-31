@@ -1,10 +1,13 @@
 import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+const LoginPage = ({setAuthenticate}) => {
+  const navigate = useNavigate()
   const loginUser = (event) => {
     event.preventDefault();
-    console.log("응")
+    setAuthenticate(true)
+    navigate('/')
   }
   return (
     <Container>
