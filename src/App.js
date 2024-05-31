@@ -18,8 +18,10 @@ import ProductAllPage from './pages/ProductAllPage';
 import LoginPage from './pages/LoginPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import Navbar from './components/Navbar';
+import { useState } from 'react';
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false) // true면 로그인, fals면 비로그인
   return (
     <div >
      <Navbar/>
