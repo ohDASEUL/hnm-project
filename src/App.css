@@ -24,16 +24,21 @@ ol, ul {
     align-items: center;
 }
 
-/* 이미지 오른쪽으로 약간 이동 */
 .logo-area img {
-    margin-left: 20px; /* 필요에 따라 조정하세요 */
+    margin-left: 20px; 
 }
 
 .login-area {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 200px; /* 필요에 따라 조정하세요 */
+    width: 200px; 
+    cursor: pointer;
+}
+
+.login-area button{
+    border: none;
+    background: transparent;
 }
 
 .menu-serch-area {
@@ -66,4 +71,45 @@ ol, ul {
 
 .serch-group input {
     border: none;
+}
+
+.card-section img:hover{
+    transform: scale(1.2);
+
+}
+
+.login-page-area {
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 전체 페이지 영역을 가운데 정렬 */
+}
+
+.login-memory-check-area {
+    display: flex;
+    align-items: center; /* 체크박스와 텍스트를 같은 줄에 정렬 */
+}
+
+.email-pw-input {
+    width: 300px;
+}
+
+.login-section-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* label과 input을 포함하는 div를 왼쪽 정렬 */
+    width: 300px; /* 입력 필드와 동일한 너비를 설정 */
+    margin-bottom: 10px; /* 섹션 간의 간격을 위해 추가 */
+}
+
+.login-section-button {
+    width: 300px;
+    margin: 5px;
 }
