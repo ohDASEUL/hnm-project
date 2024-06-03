@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row } from "react-bootstrap";
 
-const ProductAllPage = ({authenticate}) => {
+const ProductAllPage = () => {
   
   const [productList, setProductList] = useState([]);
   const getProducts = async () => {
@@ -20,8 +20,8 @@ const ProductAllPage = ({authenticate}) => {
       <Container>
         <Row>
           {productList.map((menu) => (
-            <Col lg={3} key={menu.id}>
-              <ProductCard item={menu} authenticate={authenticate} />
+            <Col lg={3}>
+              <ProductCard item={menu}/>
             </Col>
           ))}
         </Row>
