@@ -77,3 +77,8 @@ ol, ul {
     transform: scale(1.2);
 
 }
+
+
+.loginpage-input{
+    width: 300px;
+}

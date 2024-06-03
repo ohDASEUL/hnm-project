@@ -10,14 +10,14 @@ const LoginPage = ({setAuthenticate}) => {
     navigate('/')
   }
   return (
-    <Container>
+    <Container className="d-flex justify-content-center">
       <Form onSubmit={(event)=>loginUser(event)}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3 loginpage-input" controlId="formBasicEmail">
           <Form.Label>아이디</Form.Label>
           <Form.Control type="email"/>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3 loginpage-input" controlId="formBasicPassword">
           <Form.Label>비밀번호</Form.Label>
           <Form.Control type="password"/>
         </Form.Group>

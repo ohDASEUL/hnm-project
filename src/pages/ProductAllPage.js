@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row } from "react-bootstrap";
 
 const ProductAllPage = () => {
+  
   const [productList, setProductList] = useState([]);
   const getProducts = async () => {
     let url = `http://localhost:5000/products`;
