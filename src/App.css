@@ -1,84 +1,104 @@
-ol, ul {
-    list-style-type: none;
+ol,
+ul {
+  list-style-type: none;
 }
 
-/* CSS 코드 */
 .navbar-area {
-    padding: 16px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo-login-area {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
 }
 
 .logo-area {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-area img {
-    margin-left: 20px; 
+  margin-left: 20px;
 }
 
 .login-area {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 200px; 
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 200px;
+  cursor: pointer;
 }
 
-.login-area button{
-    border: none;
-    background: transparent;
+.login-area button {
+  border: none;
+  background: transparent;
 }
 
 .menu-serch-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
 }
 
 .menu-serch-area ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    justify-content: center; /* ul 태그 가운데 정렬 */
-    flex-grow: 1; /* ul 태그가 가로로 확장되도록 설정 */
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* ul 태그 가운데 정렬 */
+  flex-grow: 1; /* ul 태그가 가로로 확장되도록 설정 */
 }
 
 .menu-serch-area li {
-    margin-right: 20px; /* 메뉴 아이템 간 간격 조정 */
+  margin-right: 20px; /* 메뉴 아이템 간 간격 조정 */
 }
 
 .serch-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 200px; /* 필요에 따라 조정하세요 */
-    border-bottom: 1px solid #ccc; /* 하단 테두리 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 200px; /* 필요에 따라 조정하세요 */
+  border-bottom: 1px solid #ccc; /* 하단 테두리 설정 */
 }
 
 .serch-group input {
-    border: none;
+  border: none;
 }
 
-.card-section img:hover{
-    transform: scale(1.2);
-
+.card-section img:hover {
+  transform: scale(1.2);
 }
 
-
-.loginpage-input{
-    width: 300px;
+.loginpage-input {
+  width: 300px;
 }
+
+.product-detail-group {
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail-group img {
+  margin-right: 15px;
+}
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail-info > * {
+  margin-bottom: 5px;
+}
+
+.product-detail-info > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+
