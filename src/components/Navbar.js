@@ -4,7 +4,12 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({authenticate, setAuthenticate}) => {
+const Navbar = ({
+  authenticate,
+  setAuthenticate,
+  searchQuery,
+  setSearchQuery,
+}) => {
   const navigate = useNavigate();
   const goLoginPage = () => {
     navigate("/login");
@@ -22,6 +27,9 @@ const Navbar = ({authenticate, setAuthenticate}) => {
     "Sale",
     "지속가능성",
   ];
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
   return (
     <div className="navbar-area">
       <div className="logo-login-area">
@@ -55,7 +63,11 @@ const Navbar = ({authenticate, setAuthenticate}) => {
         </ul>
         <div className="serch-group">
           <FontAwesomeIcon icon={faSearch} />
-          <input type="text" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
         </div>
       </div>
     </div>

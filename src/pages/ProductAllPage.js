@@ -3,8 +3,7 @@ import ProductCard from "../components/ProductCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row } from "react-bootstrap";
 
-const ProductAllPage = () => {
-  
+const ProductAllPage = ({ searchQuery }) => {
   const [productList, setProductList] = useState([]);
   const getProducts = async () => {
     let url = `http://localhost:5000/products`;
@@ -15,13 +14,16 @@ const ProductAllPage = () => {
   useEffect(() => {
     getProducts();
   }, []);
+  const filteredProducts = productList.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return (
     <div>
       <Container>
         <Row>
-          {productList.map((menu) => (
-            <Col lg={3}>
-              <ProductCard item={menu}/>
+          {filteredProducts.map((menu) => (
+            <Col lg={3} key={menu.id}>
+              <ProductCard item={menu} />
             </Col>
           ))}
         </Row>
