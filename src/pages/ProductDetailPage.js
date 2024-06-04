@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 const ProductDetailPage = () => {
@@ -16,9 +16,11 @@ const ProductDetailPage = () => {
   }, []);
   return (
     <Container>
-      <div className="product-detail-group">
-        <img src={product?.img} width="300px" />
-        <div className="product-detail-info">
+      <Row>
+        <Col className="product-detail-img">
+          <img src={product?.img} width="300px" />
+        </Col>
+        <Col className="product-detail-info">
           <div>{product?.title}</div>
           <div>￦{product?.price}</div>
           <div>{product?.choice === true ? "concious choice" : ""}</div>
@@ -30,9 +32,11 @@ const ProductDetailPage = () => {
             <option value="2">M</option>
             <option value="3">L</option>
           </select>
-          <Button variant="danger" style={{ width: "400px" }}>추가</Button>
-        </div>
-      </div>
+          <Button variant="danger" className="product-detail-btn">
+            추가
+          </Button>
+        </Col>
+      </Row>
     </Container>
   );
 };

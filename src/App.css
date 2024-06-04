@@ -81,24 +81,17 @@ ul {
   width: 300px;
 }
 
-.product-detail-group {
+.product-detail-img {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
-.product-detail-group img {
-  margin-right: 15px;
+.product-detail-btn{
+  width: 300px;
+  margin-top: 5px;
 }
-.product-detail-info {
+
+.product-detail-info{
   display: flex;
   flex-direction: column;
 }
-
-.product-detail-info > * {
-  margin-bottom: 5px;
-}
-
-.product-detail-info > *:not(:last-child) {
-  margin-bottom: 5px;
-}
-
