@@ -6,9 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = ({
   authenticate,
-  setAuthenticate,
-  searchQuery,
-  setSearchQuery,
+  setAuthenticate
 }) => {
   const navigate = useNavigate();
   const goLoginPage = () => {
@@ -27,15 +25,18 @@ const Navbar = ({
     "Sale",
     "지속가능성",
   ];
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
+  const search=(e)=>{
+    if(e.key === "Enter"){
+      let keyword = e.target.value
+      navigate(`/?q=${keyword}`)
+    }
+  }
   return (
     <div className="navbar-area">
       <div className="logo-login-area">
         <div className="logo-area">
           <img
-            src="https://i.namu.wiki/i/ayYKA61pz1lLaG_PaT3AQQCtgd6fXn2SARPuSKp0zsllO7vWa2nK1BXZor6cvq1agjdwlntjGFqqLt85KnnatjJP3QvoYMsr9w_mM4eokzIqHW6KCy7xiXbt6Vi-j0pV4aHkUqcd0H71V-BojF04-w.svg"
+            src="https://th.bing.com/th?id=OIP.wUJyxgcA74djs_P1u8fJbwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
             width="61px"
             onClick={goMainHome}
           />
@@ -65,8 +66,8 @@ const Navbar = ({
           <FontAwesomeIcon icon={faSearch} />
           <input
             type="text"
-            value={searchQuery}
-            onChange={handleSearchChange}
+            onKeyPress={(e)=>search(e)}
+            
           />
         </div>
       </div>
