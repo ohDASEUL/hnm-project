@@ -3,6 +3,11 @@ ul {
   list-style-type: none;
 }
 
+.hamburger-menu,
+.menu-list {
+  display: none;
+}
+
 .navbar-area {
   padding: 16px 32px;
   display: flex;
@@ -10,7 +15,8 @@ ul {
   align-items: center;
 }
 
-.logo-login-area {
+.logo-login-area,
+.menu-serch-area {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -41,37 +47,47 @@ ul {
   background: transparent;
 }
 
-.menu-serch-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px 20px;
-}
-
 .menu-serch-area ul {
   display: flex;
   padding: 0;
   margin: 0;
-  justify-content: center; /* ul 태그 가운데 정렬 */
-  flex-grow: 1; /* ul 태그가 가로로 확장되도록 설정 */
+  justify-content: center; 
+  flex-grow: 1; 
 }
 
 .menu-serch-area li {
-  margin-right: 20px; /* 메뉴 아이템 간 간격 조정 */
+  margin-right: 20px; 
 }
 
 .serch-group {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 200px; /* 필요에 따라 조정하세요 */
-  border-bottom: 1px solid #ccc; /* 하단 테두리 설정 */
+  width: 200px; 
+  border-bottom: 1px solid #ccc; 
 }
 
 .serch-group input {
   border: none;
 }
+.card-section {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+}
+
+.card-section img {
+  display: block; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 300px;
+}
+
+
+.card-section {
+  text-align: center; 
+}
+
 
 .card-section img:hover {
   transform: scale(1.2);
@@ -86,12 +102,57 @@ ul {
   justify-content: flex-end;
 }
 
-.product-detail-btn{
+.product-detail-btn {
   width: 300px;
   margin-top: 5px;
 }
 
-.product-detail-info{
+.product-detail-info {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 768px){
+  .card-section img:hover {
+    transform: none;
+  }
+  .login-area{
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .menu-serch-area {
+    display: none; 
+  }
+
+  .menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    list-style: none;
+  }
+
+  .menu-list li {
+    padding: 10px 0;
+  }
+
+  .menu-list.show {
+    display: block; 
+  }
 }

@@ -119,26 +119,6 @@
             "new":true,
             "size":["S","M","L"]
 
-        },
-        {
-            "id":12,
-            "img":"https://noona-hnm.netlify.app/mash-dress.jpeg",
-            "title":"셔링 메쉬 드레스",
-            "price":14900,
-            "choice":true,
-            "new":true,
-            "size":["S","M","L"]
-
-        },
-        {
-            "id":13,
-            "img":"https://noona-hnm.netlify.app/sweat-shirt.jpeg",
-            "title":"스웨트셔츠",
-            "price":29900,
-            "choice":false,
-            "new":false,
-            "size":["S","M","L"]
-
         }
     ]
 }
